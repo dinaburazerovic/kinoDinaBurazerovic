@@ -22,7 +22,6 @@ body {
     max-width: 1080px;
 }
 
-/* ---- Tabs ---- */
 .tabs {
     display: flex;
     gap: 4px;
@@ -49,7 +48,6 @@ body {
     border: 1px solid #cccccc;
 }
 
-/* ---- Container ---- */
 .container {
     width: 100%;
     border: 2px solid #aaaaaa;
@@ -58,7 +56,6 @@ body {
     overflow: hidden;
 }
 
-/* ---- Topbar ---- */
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -89,7 +86,6 @@ body {
     text-decoration: underline;
 }
 
-/* ---- Sala Section ---- */
 .sala-section {
     padding: 24px 18px 32px;
     display: flex;
@@ -98,7 +94,6 @@ body {
     gap: 18px;
 }
 
-/* ---- Film Info ---- */
 .film-info {
     text-align: center;
     line-height: 1.6;
@@ -115,7 +110,6 @@ body {
     color: #444444;
 }
 
-/* ---- Platno ---- */
 .platno-wrap {
     display: flex;
     flex-direction: column;
@@ -145,7 +139,6 @@ body {
     margin-top: 2px;
 }
 
-/* ---- Sjedista Grid ---- */
 .sjedista-wrapper {
     overflow-x: auto;
     width: 100%;
@@ -176,7 +169,6 @@ body {
     margin-right: 4px;
 }
 
-/* ---- Sjediste kvadrat ---- */
 .sjediste {
     width: 36px;
     height: 36px;
@@ -207,7 +199,6 @@ body {
     border-color: #9e9e9e;
 }
 
-/* ---- Legenda ---- */
 .legenda {
     display: flex;
     gap: 24px;
@@ -248,7 +239,6 @@ body {
     border: 1px solid #9e9e9e;
 }
 
-/* ---- Responsive ---- */
 @media (max-width: 520px) {
     .sjediste {
         width: 28px;
