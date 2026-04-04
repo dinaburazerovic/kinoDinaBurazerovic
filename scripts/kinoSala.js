@@ -119,3 +119,28 @@ function stilizujDugme(btn) {
     };
 }
 
+function updateDugmad() {
+    if (trenutnaProjekcija === 0) {
+        prevBtn.disabled = true;
+        prevBtn.style.backgroundColor = "#eee";
+        prevBtn.style.color = "#999";
+        prevBtn.style.cursor = "not-allowed";
+    } else {
+        prevBtn.disabled = false;
+        prevBtn.style.backgroundColor = "#333";
+        prevBtn.style.color = "white";
+        prevBtn.style.cursor = "pointer";
+    }
+
+    if (trenutnaProjekcija === podaci.projekcije.length - 1) {
+        nextBtn.disabled = true;
+        nextBtn.style.backgroundColor = "#eee";
+        nextBtn.style.color = "#999";
+        nextBtn.style.cursor = "not-allowed";
+    } else {
+        nextBtn.disabled = false;
+        nextBtn.style.backgroundColor = "#333";
+        nextBtn.style.color = "white";
+        nextBtn.style.cursor = "pointer";
+    }
+}
