@@ -1,5 +1,5 @@
 let trenutnaProjekcija = 0;
-let prevBtn, nextBtn; // globalno da ih možemo mijenjati
+let prevBtn, nextBtn;
 
 window.onload = function () {
     if (!validirajPodatke(podaci)) {
@@ -53,7 +53,6 @@ function prikaziSalu() {
         grid.appendChild(redDiv);
     });
 
-    // 🔥 KLJUČNO: update dugmadi svaki put
     updateDugmad();
 }
 
@@ -65,7 +64,6 @@ function klikNaSjediste(sjediste) {
 }
 
 
-// NAVIGACIJA
 function dodajNavigaciju() {
     const container = document.querySelector(".sala-section");
 
@@ -101,7 +99,6 @@ function dodajNavigaciju() {
 }
 
 
-// stil dugmeta
 function stilizujDugme(btn) {
     btn.style.padding = "10px 20px";
     btn.style.margin = "5px";
@@ -122,32 +119,3 @@ function stilizujDugme(btn) {
     };
 }
 
-
-// 🔥 OVO JE NOVO – logika za bijelo dugme
-function updateDugmad() {
-    // prethodna
-    if (trenutnaProjekcija === 0) {
-        prevBtn.disabled = true;
-        prevBtn.style.backgroundColor = "#eee";
-        prevBtn.style.color = "#999";
-        prevBtn.style.cursor = "not-allowed";
-    } else {
-        prevBtn.disabled = false;
-        prevBtn.style.backgroundColor = "#333";
-        prevBtn.style.color = "white";
-        prevBtn.style.cursor = "pointer";
-    }
-
-    // sljedeća
-    if (trenutnaProjekcija === podaci.projekcije.length - 1) {
-        nextBtn.disabled = true;
-        nextBtn.style.backgroundColor = "#eee";
-        nextBtn.style.color = "#999";
-        nextBtn.style.cursor = "not-allowed";
-    } else {
-        nextBtn.disabled = false;
-        nextBtn.style.backgroundColor = "#333";
-        nextBtn.style.color = "white";
-        nextBtn.style.cursor = "pointer";
-    }
-}
