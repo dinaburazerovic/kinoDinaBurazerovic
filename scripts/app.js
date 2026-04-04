@@ -110,3 +110,21 @@ function generisiSjedista(mod) {
 
     return sjedista;
 }
+
+function validirajPodatke(podaci) {
+    if (!podaci.projekcije || podaci.projekcije.length === 0) {
+        return false;
+    }
+
+    const dozvoljeni = ["slobodno", "zauzeto", "rezervisano"];
+
+    for (let p of podaci.projekcije) {
+        for (let s of p.sjedista) {
+            if (!dozvoljeni.includes(s.status)) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
