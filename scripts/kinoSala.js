@@ -1,3 +1,4 @@
+
 let trenutnaProjekcija = 0;
 let prevBtn, nextBtn;
 
@@ -59,6 +60,10 @@ function prikaziSalu() {
 function klikNaSjediste(sjediste) {
     if (sjediste.status === "slobodno") {
         sjediste.status = "rezervisano";
+
+        // 🔥 spremi u localStorage
+        localStorage.setItem("projekcije", JSON.stringify(podaci));
+
         prikaziSalu();
     }
 }

@@ -1,32 +1,41 @@
-const podaci = {
-    projekcije: [
-        {
-            film: "Avatar 2",
-            vrijeme: "18:00",
-            sjedista: generisiSjedista(1)
-        },
-        {
-            film: "Oppenheimer",
-            vrijeme: "20:00",
-            sjedista: generisiSjedista(2)
-        },
-        {
-            film: "Dune 2",
-            vrijeme: "16:30",
-            sjedista: generisiSjedista(3)
-        },
-        {
-            film: "Interstellar",
-            vrijeme: "21:15",
-            sjedista: generisiSjedista(4)
-        },
-        {
-            film: "The Batman",
-            vrijeme: "19:45",
-            sjedista: generisiSjedista(5)
-        }
-    ]
-};
+const spremljeniPodaci = localStorage.getItem("projekcije");
+
+let podaci;
+
+if (spremljeniPodaci) {
+    podaci = JSON.parse(spremljeniPodaci);
+} else {
+    podaci = {
+        projekcije: [
+            {
+                film: "Avatar 2",
+                vrijeme: "18:00",
+                sjedista: generisiSjedista(1)
+            },
+            {
+                film: "Oppenheimer",
+                vrijeme: "20:00",
+                sjedista: generisiSjedista(2)
+            },
+            {
+                film: "Dune 2",
+                vrijeme: "16:30",
+                sjedista: generisiSjedista(3)
+            },
+            {
+                film: "Interstellar",
+                vrijeme: "21:15",
+                sjedista: generisiSjedista(4)
+            },
+            {
+                film: "The Batman",
+                vrijeme: "19:45",
+                sjedista: generisiSjedista(5)
+            }
+        ]
+    };
+    localStorage.setItem("projekcije", JSON.stringify(podaci));
+}
 
 function generisiSjedista(mod) {
     const redovi = ["A","B","C","D","E","F","G","H"];
